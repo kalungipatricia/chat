@@ -52,6 +52,7 @@ class LoginController extends Controller
         return [
             $field => $request->get($this->username()),
             'password' => $request->password,
+
         ];
     }
 

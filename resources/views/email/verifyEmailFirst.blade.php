@@ -1,0 +1,1 @@
+<h3>Please verify your activate your account.</h3>

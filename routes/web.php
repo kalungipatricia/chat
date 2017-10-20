@@ -12,7 +12,12 @@
 */
 
 Auth::routes();
-
+Route::get('profile', 'UserController@profile');
 Route::get('/', 'ChatsController@index');
 Route::get('messages', 'ChatsController@fetchMessages');
 Route::post('messages', 'ChatsController@sendMessage');
+// add verify email controller
+Route::get('verifyEmailFirst', 'Auth\RegisterController@verifyEmailFirst')->name('verifyEmailFirst');
+Route::get('verify/{email}/{verifyToken}', 'Auth\RegisterController@sendEmail')->name('sendEmailDone');
+
+
